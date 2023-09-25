@@ -1,3 +1,5 @@
+## This is a temporary fork to make new fixes available for use in a private Python project. If you're unsure, please use [the original repository](https://github.com/andreikop/python-ws-discovery).
+
 [![Documentation Status](https://readthedocs.org/projects/python-ws-discovery/badge/?version=latest)](https://python-ws-discovery.readthedocs.io/en/latest)
 
 WS-Discovery in Python
