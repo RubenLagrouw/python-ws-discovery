@@ -117,6 +117,10 @@ class Discovery:
 
         self._remoteServices.clear()
 
+    def getRemoteServices(self, types=None, scopes=None):
+        """ Returns any found web services. Filters by given types or scopes. """
+        return filterServices(list(self._remoteServices.values()), types, scopes)
+
     def searchServices(self, types=None, scopes=None, address=None, port=None, timeout=3):
         'search for services given the TYPES and SCOPES in a given TIMEOUT'
         try:
@@ -126,7 +130,7 @@ class Discovery:
 
         time.sleep(timeout)
 
-        return filterServices(list(self._remoteServices.values()), types, scopes)
+        return self.getRemoteServices(types, scopes)
 
     def stop(self):
         self.clearRemoteServices()
